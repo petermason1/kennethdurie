@@ -345,6 +345,65 @@ img, video, iframe {
     }
 }
 
+/* Development Landing Page */
+.dev-landing {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.dev-landing-content {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dev-landing-content h1 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.dev-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.dev-landing-content h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.dev-message {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.dev-services {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.dev-services p {
+    font-size: 1rem;
+    color: #667eea;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
 /* Development Notice */
 .dev-notice {
     background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
@@ -363,6 +422,64 @@ img, video, iframe {
     margin: 0;
     font-size: 0.9rem;
     word-wrap: break-word;
+}
+
+/* Responsive for dev landing */
+@media (max-width: 480px) {
+    .dev-landing-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .dev-landing-content h1 {
+        font-size: 2rem;
+    }
+    
+    .dev-subtitle {
+        font-size: 1rem;
+    }
+    
+    .dev-icon {
+        font-size: 3rem;
+    }
+    
+    .dev-landing-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .dev-message {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .dev-landing {
+        padding: 1rem 0.5rem;
+    }
+    
+    .dev-landing-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .dev-landing-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .dev-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .dev-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .dev-landing-content h2 {
+        font-size: 1.25rem;
+    }
+    
+    .dev-message {
+        font-size: 0.9rem;
+    }
 }
 
 /* Skip Links */
@@ -1117,6 +1234,21 @@ main {
     font-weight: bold;
     position: absolute;
     left: 0;
+}
+
+.media-list ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.media-list ol li {
+    padding-left: 0.5rem;
+    position: relative;
+}
+
+.media-list ol li:before {
+    display: none;
 }
 
 /* External Links */
