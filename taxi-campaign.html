@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Campaign - Kenneth Durie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kenneth Durie</h1>
+            <p class="subtitle">Disability Support Network</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="inventions.html">Our Inventions</a></li>
+                    <li><a href="group-chat.html">Group Chat</a></li>
+                    <li><a href="buddying.html">Buddying through difficult times</a></li>
+                    <li><a href="music-media.html">Music & Media</a></li>
+                    <li><a href="pool-snooker-training.html">Pool & Snooker Training</a></li>
+                    <li><a href="championship-manager.html">Championship Manager 99/00</a></li>
+                    <li><a href="healthy-eating.html">Healthy Eating Advice</a></li>
+                    <li><a href="blue-badge.html">Blue Badge Advice</a></li>
+                    <li><a href="coffee-mornings.html">Coffee Mornings</a></li>
+                    <li><a href="taxi-campaign.html">Taxi Campaign</a></li>
+                    <li><a href="talent-show.html">Talent Show</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="content">
+                <h2>Campaign for Free or Heavily Discounted Taxis for Disabled People</h2>
+                <p>Join our campaign to make transportation more accessible and affordable for disabled people. Together, we can make a difference.</p>
+                
+                <div class="content-box">
+                    <h3>About the Campaign</h3>
+                    <p>Transportation is a fundamental right that enables independence, access to healthcare, employment, and social participation. Many disabled people face significant barriers and costs when it comes to getting around. This campaign advocates for free or heavily discounted taxi services for disabled people, ensuring everyone has access to safe, reliable, and affordable transportation.</p>
+                </div>
+
+                <div class="content-box">
+                    <h3>Sign Up Here</h3>
+                    <p>Show your support by signing up to our campaign. Your voice matters and together we can create change.</p>
+                    <form class="signup-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Postcode *</label>
+                            <input type="text" id="postcode" name="postcode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Why is this campaign important to you? (Optional)</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Sign Up to Support the Campaign</button>
+                    </form>
+                </div>
+
+                <div class="content-box">
+                    <h3>Write to Your Local MP</h3>
+                    <p>Use the letter template below to contact your local MP and advocate for free or heavily discounted taxi services for disabled people. Personalise it with your own experiences and circumstances.</p>
+                    
+                    <div class="letter-template">
+                        <h4>Letter Template</h4>
+                        <div class="letter-content">
+                            <p>[Your Name]<br>
+                            [Your Address]<br>
+                            [Your Postcode]<br>
+                            [Date]</p>
+                            
+                            <p>[MP's Name]<br>
+                            [MP's Address]</p>
+                            
+                            <p>Dear [MP's Name],</p>
+                            
+                            <p>I am writing to you as a constituent to raise an important issue regarding transportation accessibility for disabled people in our area.</p>
+                            
+                            <p>Transportation is essential for disabled people to access healthcare appointments, employment opportunities, education, and social activities. However, many disabled people face significant financial barriers when it comes to getting around, particularly when public transport is not accessible or available.</p>
+                            
+                            <p>I am supporting a campaign calling for free or heavily discounted taxi services for disabled people. This would:</p>
+                            
+                            <ul>
+                                <li>Improve access to essential services and healthcare</li>
+                                <li>Enable greater independence and social participation</li>
+                                <li>Reduce isolation and improve quality of life</li>
+                                <li>Support disabled people in accessing employment and education</li>
+                                <li>Provide a reliable alternative when public transport is not accessible</li>
+                            </ul>
+                            
+                            <p>[Add your personal experience here - how transportation barriers affect you or someone you know]</p>
+                            
+                            <p>I would be grateful if you could:</p>
+                            <ul>
+                                <li>Raise this issue in Parliament</li>
+                                <li>Support initiatives for discounted or free taxi services for disabled people</li>
+                                <li>Work with local authorities to explore funding options for such a scheme</li>
+                                <li>Meet with disability organisations to discuss this matter further</li>
+                            </ul>
+                            
+                            <p>I look forward to hearing your views on this important matter and would welcome the opportunity to discuss it further with you.</p>
+                            
+                            <p>Yours sincerely,</p>
+                            
+                            <p>[Your Name]</p>
+                        </div>
+                        <button onclick="copyLetter()" class="btn-secondary">Copy Letter Template</button>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <h3>Find Your Local MP</h3>
+                    <p>To find your local MP's contact details, visit <a href="https://www.theyworkforyou.com" target="_blank" rel="noopener noreferrer">TheyWorkForYou.com</a> or <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener noreferrer">members.parliament.uk/FindYourMP</a> and enter your postcode.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kenneth Durie - Disability Support Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyLetter() {
+            const letterText = document.querySelector('.letter-content').innerText;
+            navigator.clipboard.writeText(letterText).then(function() {
+                alert('Letter template copied to clipboard!');
+            }, function() {
+                alert('Failed to copy. Please select and copy the text manually.');
+            });
+        }
+
+        document.querySelector('.signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for signing up to support the campaign! Your support makes a difference.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

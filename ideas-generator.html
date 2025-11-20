@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas Generator - Kenneth Durie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kenneth Durie</h1>
+            <p class="subtitle">Disability Support Network</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="inventions.html">Our Inventions</a></li>
+                    <li><a href="group-chat.html">Group Chat</a></li>
+                    <li><a href="buddying.html">Buddying through difficult times</a></li>
+                    <li><a href="music-media.html">Music & Media</a></li>
+                    <li><a href="pool-snooker-training.html">Pool & Snooker Training</a></li>
+                    <li><a href="championship-manager.html">Championship Manager 99/00</a></li>
+                    <li><a href="healthy-eating.html">Healthy Eating Advice</a></li>
+                    <li><a href="blue-badge.html">Blue Badge Advice</a></li>
+                    <li><a href="coffee-mornings.html">Coffee Mornings</a></li>
+                    <li><a href="taxi-campaign.html">Taxi Campaign</a></li>
+                    <li><a href="talent-show.html">Talent Show</a></li>
+                    <li><a href="ideas-generator.html">Ideas Generator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="content">
+                <h2>Ideas Generator</h2>
+                <p>Need inspiration? Use our ideas generator to discover activities, projects, and suggestions tailored to your interests and needs.</p>
+                
+                <div class="content-box">
+                    <h3>Generate Ideas</h3>
+                    <p>Select a category below and click the button to get a random idea!</p>
+                    
+                    <div class="generator-controls">
+                        <label for="category">Choose a category:</label>
+                        <select id="category" class="category-select">
+                            <option value="all">All Categories</option>
+                            <option value="activities">Activities & Hobbies</option>
+                            <option value="social">Social & Community</option>
+                            <option value="creative">Creative Projects</option>
+                            <option value="wellbeing">Wellbeing & Health</option>
+                            <option value="learning">Learning & Skills</option>
+                            <option value="support">Support & Resources</option>
+                        </select>
+                        <button onclick="generateIdea()" class="btn-primary">Generate Idea</button>
+                    </div>
+                    
+                    <div id="idea-result" class="idea-result">
+                        <p class="idea-placeholder">Click "Generate Idea" to get started!</p>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <h3>How It Works</h3>
+                    <p>The Ideas Generator provides random suggestions based on different categories. Whether you're looking for a new hobby, social activity, creative project, or support resource, we've got ideas to inspire you!</p>
+                    <ul class="media-list">
+                        <li>Select a category or choose "All Categories"</li>
+                        <li>Click "Generate Idea" to get a random suggestion</li>
+                        <li>Keep generating until you find something that interests you</li>
+                        <li>Share your favorite ideas with others in our community</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kenneth Durie - Disability Support Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const ideas = {
+            activities: [
+                "Join a local walking group or accessible exercise class",
+                "Try a new board game or puzzle",
+                "Start a book club with friends",
+                "Explore accessible nature trails in your area",
+                "Learn a new card game",
+                "Try gardening or indoor plant care",
+                "Join a photography group",
+                "Start a collection (stamps, coins, postcards, etc.)",
+                "Try bird watching",
+                "Explore local museums and galleries"
+            ],
+            social: [
+                "Attend Ken's Coffee Mornings at Backworth Club",
+                "Join our Group Chat sessions",
+                "Participate in the Talent Show",
+                "Organize a virtual meetup with friends",
+                "Join a local community group",
+                "Volunteer for a cause you care about",
+                "Start a pen pal exchange",
+                "Join an online forum or community",
+                "Organize a themed party or gathering",
+                "Create a WhatsApp group with like-minded people"
+            ],
+            creative: [
+                "Start a journal or diary",
+                "Try painting or drawing",
+                "Learn to play a musical instrument",
+                "Write poetry or short stories",
+                "Try knitting, crochet, or other crafts",
+                "Create a scrapbook of memories",
+                "Start a blog or vlog",
+                "Try photography as a hobby",
+                "Learn calligraphy or hand lettering",
+                "Make greeting cards for friends and family"
+            ],
+            wellbeing: [
+                "Try a new healthy recipe from our Healthy Eating page",
+                "Start a daily meditation practice",
+                "Create a self-care routine",
+                "Try gentle yoga or stretching exercises",
+                "Keep a gratitude journal",
+                "Practice deep breathing exercises",
+                "Plan regular breaks and rest periods",
+                "Try aromatherapy or relaxation techniques",
+                "Create a calming space in your home",
+                "Join a mindfulness group"
+            ],
+            learning: [
+                "Learn a new language online",
+                "Take an online course in a subject that interests you",
+                "Learn to use a new app or software",
+                "Read about a topic you've always been curious about",
+                "Watch educational videos or documentaries",
+                "Learn a new skill through YouTube tutorials",
+                "Join a local adult education class",
+                "Learn about local history",
+                "Try learning sign language",
+                "Explore online learning platforms"
+            ],
+            support: [
+                "Connect with a buddy through our buddying program",
+                "Explore our Blue Badge advice page",
+                "Check out our inventions page for accessibility solutions",
+                "Join our taxi campaign",
+                "Read our healthy eating advice",
+                "Connect with others in group chat",
+                "Share your experiences in our community",
+                "Look into local support services",
+                "Explore our music and media resources",
+                "Get involved in community advocacy"
+            ]
+        };
+
+        function generateIdea() {
+            const category = document.getElementById('category').value;
+            const resultDiv = document.getElementById('idea-result');
+            
+            let selectedIdeas = [];
+            
+            if (category === 'all') {
+                // Combine all categories
+                Object.values(ideas).forEach(cat => {
+                    selectedIdeas = selectedIdeas.concat(cat);
+                });
+            } else {
+                selectedIdeas = ideas[category] || [];
+            }
+            
+            if (selectedIdeas.length === 0) {
+                resultDiv.innerHTML = '<p class="idea-text">No ideas available for this category.</p>';
+                return;
+            }
+            
+            // Get random idea
+            const randomIndex = Math.floor(Math.random() * selectedIdeas.length);
+            const randomIdea = selectedIdeas[randomIndex];
+            
+            // Animate the result
+            resultDiv.style.opacity = '0';
+            setTimeout(() => {
+                resultDiv.innerHTML = `
+                    <div class="idea-display">
+                        <div class="idea-icon">💡</div>
+                        <p class="idea-text">${randomIdea}</p>
+                        <button onclick="generateIdea()" class="btn-secondary">Get Another Idea</button>
+                    </div>
+                `;
+                resultDiv.style.opacity = '1';
+            }, 200);
+        }
+
+        // Allow Enter key to generate idea
+        document.getElementById('category').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                generateIdea();
+            }
+        });
+    </script>
+</body>
+</html>
