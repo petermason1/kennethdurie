@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Print Solutions - Kenneth Durie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <h1>Kenneth Durie</h1>
+            <p class="subtitle">Disability Support Network</p>
+            <nav class="main-nav" id="navigation" role="navigation" aria-label="Main navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="menu-icon">☰</span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="group-chat.html" class="nav-link">Group Chat</a></li>
+                    <li><a href="buddying.html" class="nav-link">Buddying</a></li>
+                    <li><a href="coffee-mornings.html" class="nav-link">Coffee Mornings</a></li>
+                    <li><a href="healthy-eating.html" class="nav-link">Healthy Eating</a></li>
+                    <li><a href="blue-badge.html" class="nav-link">Blue Badge</a></li>
+                    <li><a href="ideas-generator.html" class="nav-link">Ideas</a></li>
+                    <li><a href="taxi-campaign.html" class="nav-link">Taxi Campaign</a></li>
+                    <li><a href="large-print.html" class="nav-link active">Large Print</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dev-notice" role="alert" aria-live="polite">
+        <p>🚧 This website is currently under development. Content and features are being added regularly.</p>
+    </div>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section class="content">
+                <h2>Large Print Solutions</h2>
+                <p>Accessible print solutions for individuals with visual impairments. We partner with professional print services to provide large format printing that makes information accessible to everyone.</p>
+                
+                <div class="content-box">
+                    <h3>Professional Print Services</h3>
+                    <p>We work with <a href="https://www.northernprintsolutions.co.uk" target="_blank" rel="noopener noreferrer" class="external-link">Northern Print Solutions</a> to provide high-quality large format printing services. Whether you need documents, posters, signage, or marketing materials in large print format, we can help connect you with the right printing solutions.</p>
+                    <p><strong>Northern Print Solutions</strong> offers a range of printing services including:</p>
+                    <ul class="media-list">
+                        <li>Large format printing</li>
+                        <li>Small format print</li>
+                        <li>Direct mail services</li>
+                        <li>Specialist finishing</li>
+                        <li>Sustainable printing options</li>
+                        <li>Custom paper stock selection</li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h3>Accessibility in Print</h3>
+                    <p>Large print materials are essential for individuals with visual impairments. We understand the importance of accessible information and can help you find the right printing solutions to make your content accessible to everyone.</p>
+                    <p>For professional print services, visit <a href="https://www.northernprintsolutions.co.uk" target="_blank" rel="noopener noreferrer" class="external-link">Northern Print Solutions</a> or contact them directly:</p>
+                    <ul class="media-list">
+                        <li><strong>Email:</strong> <a href="mailto:hello@northernprintsolutions.co.uk">hello@northernprintsolutions.co.uk</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:01914111698">0191 411 1698</a></li>
+                        <li><strong>Website:</strong> <a href="https://www.northernprintsolutions.co.uk" target="_blank" rel="noopener noreferrer">www.northernprintsolutions.co.uk</a></li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h3>Get in Touch</h3>
+                    <p>If you need assistance finding accessible print solutions or have questions about large format printing, please <a href="contact.html">contact us</a> and we'll be happy to help.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="group-chat.html">Group Chat</a></li>
+                        <li><a href="coffee-mornings.html">Coffee Mornings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">📘</a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter">🐦</a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">📷</a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support Us</h4>
+                    <a href="#support" class="footer-support-link">Support Site Funding</a>
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Kenneth Durie - Disability Support Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

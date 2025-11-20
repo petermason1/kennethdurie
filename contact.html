@@ -7,32 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="container">
             <h1>Kenneth Durie</h1>
             <p class="subtitle">Disability Support Network</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="inventions.html">Our Inventions</a></li>
-                    <li><a href="group-chat.html">Group Chat</a></li>
-                    <li><a href="buddying.html">Buddying through difficult times</a></li>
-                    <li><a href="music-media.html">Music & Media</a></li>
-                    <li><a href="pool-snooker-training.html">Pool & Snooker Training</a></li>
-                    <li><a href="championship-manager.html">Championship Manager 99/00</a></li>
-                    <li><a href="healthy-eating.html">Healthy Eating Advice</a></li>
-                    <li><a href="blue-badge.html">Blue Badge Advice</a></li>
-                    <li><a href="coffee-mornings.html">Coffee Mornings</a></li>
-                    <li><a href="taxi-campaign.html">Taxi Campaign</a></li>
-                    <li><a href="talent-show.html">Talent Show</a></li>
-                    <li><a href="ideas-generator.html">Ideas Generator</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav class="main-nav" id="navigation" role="navigation" aria-label="Main navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="menu-icon">☰</span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="group-chat.html" class="nav-link">Group Chat</a></li>
+                    <li><a href="buddying.html" class="nav-link">Buddying</a></li>
+                    <li><a href="coffee-mornings.html" class="nav-link">Coffee Mornings</a></li>
+                    <li><a href="healthy-eating.html" class="nav-link">Healthy Eating</a></li>
+                    <li><a href="blue-badge.html" class="nav-link">Blue Badge</a></li>
+                    <li><a href="ideas-generator.html" class="nav-link">Ideas</a></li>
+                    <li><a href="taxi-campaign.html" class="nav-link">Taxi Campaign</a></li>
+                    <li><a href="large-print.html" class="nav-link">Large Print</a></li>
+                    <li><a href="karaoke-service.html" class="nav-link">Karaoke Service</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <div class="dev-notice" role="alert" aria-live="polite">
+        <p>🚧 This website is currently under development. Content and features are being added regularly.</p>
+    </div>
+
+    <main id="main-content" role="main">
         <div class="container">
             <section class="content">
                 <h2>Contact Us</h2>
@@ -79,5 +83,19 @@
             <p>&copy; 2024 Kenneth Durie - Disability Support Network. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
 </body>
 </html>
